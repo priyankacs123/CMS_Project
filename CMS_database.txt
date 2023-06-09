@@ -13,7 +13,7 @@ CREATE TABLE Users (
   Username VARCHAR(50) NOT NULL,
   Password VARCHAR(50) NOT NULL,
   Email VARCHAR(50) NOT NULL ,
-  Phonenumber bigint(10) NOT NULL,
+  Phonenumber bigint NOT NULL,
   JobID int NOT NULL,
   FOREIGN KEY(JobID) REFERENCES Job(JobID)
 );
