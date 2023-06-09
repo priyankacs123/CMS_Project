@@ -1,5 +1,6 @@
 
-create database CMS
+create database CMS;
+use database CMS;
 
 CREATE TABLE Job (
   JobId INT IDENTITY(1,1) PRIMARY KEY,
