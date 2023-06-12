@@ -1,0 +1,71 @@
+<div class="container-fluid g-0">
+   <app-header (sideNavToggled)="sideNavStatus=$event;"></app-header>
+   <main>
+    <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open':sideNavStatus}"></app-sidenav> 
+    <div class="display-area p-3" [ngClass]="{'display-area-shrink':sideNavStatus}">
+      <!--<p class="fs-1 fw-bold fst-italic">Routing Component Contents</p> <!-- should put Router Outlet here-->
+      
+        <div class="container-fluid px-4">
+            <div class="row g-3 my-2">
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">720</h3>
+                            <p class="fs-5">Products</p>
+                        </div>
+                        <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">720</h3>
+                            <p class="fs-5">Products</p>
+                        </div>
+                        <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">720</h3>
+                            <p class="fs-5">Products</p>
+                        </div>
+                        <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">720</h3>
+                            <p class="fs-5">Products</p>
+                        </div>
+                        <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    
+
+<br>
+
+
+  <div class="row">
+    <div class="col-lg-4">
+      <h2>Pie Chart</h2>
+      <canvas id="piechart"></canvas>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<!-- for recent uploads-->
+
+
+
+<router-outlet></router-outlet>
