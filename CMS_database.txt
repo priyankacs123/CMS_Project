@@ -4,8 +4,7 @@ use database CMS;
 
 CREATE TABLE Job (
   JobId INT IDENTITY(1,1) PRIMARY KEY,
- JobRole VARCHAR(50)CONSTRAINT CHK_JobRole
- CHECK (JobRole IN ('Manager', 'Employee', 'Supervisor', 'Admin','HR'))); 
+ JobRole VARCHAR(50); 
 
 
 CREATE TABLE Users (
