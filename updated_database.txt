@@ -149,3 +149,18 @@ END
 --excute procedure
 EXEC GetContentByUserID @UserID = 1;
 
+-- procedure to  Get Content By  CategoryID
+CREATE PROCEDURE GetContentByCategoryID
+  @CategoryID INT
+AS
+BEGIN
+  SELECT c.ContentID, c.Title, c.Description, c.FileType, c.FileURL, c.RetentionPeriod, u.Username
+  FROM Contents c
+  INNER JOIN Categories ct ON c.CategoryID = ct.CategoryID
+  INNER JOIN Users u ON c.UserID = u.UserID
+  WHERE ct.CategoryID = @CategoryID;
+END
+
+--excute procedure
+ EXEC GetContentByCategoryID @CategoryID = 4;
+
