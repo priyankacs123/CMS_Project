@@ -133,3 +133,19 @@ VALUES (4, 1, 1, 1);
 -- Grant edit permission to user5 for content with ContentID 1
 INSERT INTO Permission (UserID, ContentID, CanEdit, CanUpdate)
 VALUES (5, 1, 1, 0);
+
+
+-- procedure to  Get Content By  UserID
+CREATE PROCEDURE GetContentByUserID
+  @UserID INT
+AS
+BEGIN
+  SELECT c.ContentID, c.Title, c.Description, c.FileType, c.FileURL, c.RetentionPeriod, ct.CategoryName
+  FROM Contents c
+  INNER JOIN Categories ct ON c.CategoryID = ct.CategoryID
+  INNER JOIN Permission p ON c.ContentID = p.ContentID
+  WHERE p.UserID = @UserID;
+END
+--excute procedure
+EXEC GetContentByUserID @UserID = 1;
+
